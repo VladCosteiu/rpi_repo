@@ -1,0 +1,25 @@
+===== GPIO 1 =====
+type=1
+port=8
+label=ALB
+==================
+===== GPIO 2 =====
+type=1
+port=10
+label=ALBASTRU
+==================
+===== GPIO 3 =====
+type=1
+port=12
+label=ROSU
+==================
+===== GPIO 4 =====
+type=1
+port=15
+label=NOT_USED
+==================
+===== GPIO 5 =====
+type=0
+port=10
+label=SENZOR_TEMPERATURA
+==================

@@ -1,0 +1,3 @@
+timer_1 =3
+timer_2 =4
+timer_3 =5

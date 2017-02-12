@@ -1,0 +1,83 @@
+# in functia 
+def gui_main_window():
+# menu item 2
+menu_bar.add_cascade(label="Configure", menu=config_menu)
+config_menu.add_command(label="Configure GPIO", command=gui_config_window)
+config_menu.add_command(label="GPIO Layout", command=gui_gpio_layout)
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+def gui_gpio_layout():
+    gpio_layout_frame = Tkinter.Toplevel() # ai voie doar o instanta de Tk()
+    gpio_layout_frame.title("GPIO Layout")
+    gpio_layout_frame.geometry("400x500")
+
+    gpio_1_label = Tkinter.Label(gpio_layout_frame, text="3V3 _____________________ 1")
+    gpio_2_label = Tkinter.Label(gpio_layout_frame, text="2 _________________ 5V")
+    gpio_3_label = Tkinter.Label(gpio_layout_frame, text="GPIO00 _________________ 3")
+    gpio_4_label = Tkinter.Label(gpio_layout_frame, text="4 _________________ 5V")
+    gpio_5_label = Tkinter.Label(gpio_layout_frame, text="GPIO01 _________________ 5")
+    gpio_6_label = Tkinter.Label(gpio_layout_frame, text="6 _________________ GROUND")
+    gpio_7_label = Tkinter.Label(gpio_layout_frame, text="GPIO04 _________________ 7")
+    gpio_8_label = Tkinter.Label(gpio_layout_frame, text="8 _________________ GPIO14")
+    gpio_9_label = Tkinter.Label(gpio_layout_frame, text="GROUND _______________ 9")
+    gpio_10_label = Tkinter.Label(gpio_layout_frame, text="10 ________________ GPIO15")
+    gpio_11_label = Tkinter.Label(gpio_layout_frame, text="GPIO17 ________________ 11")
+    gpio_12_label = Tkinter.Label(gpio_layout_frame, text="12 ________________ GPIO18")
+    gpio_13_label = Tkinter.Label(gpio_layout_frame, text="GPIO21 ________________ 13")
+    gpio_14_label = Tkinter.Label(gpio_layout_frame, text="14 ________________ GROUND")
+    gpio_15_label = Tkinter.Label(gpio_layout_frame, text="GPI022 _________________ 15")
+    gpio_16_label = Tkinter.Label(gpio_layout_frame, text="16 ________________ GPIO23")
+    gpio_17_label = Tkinter.Label(gpio_layout_frame, text="3V3 ____________________ 17")
+    gpio_18_label = Tkinter.Label(gpio_layout_frame, text="18 ________________ GPIO24")
+    gpio_19_label = Tkinter.Label(gpio_layout_frame, text="GPIO10 ________________ 19")
+    gpio_20_label = Tkinter.Label(gpio_layout_frame, text="20 ________________ GROUND")
+    gpio_21_label = Tkinter.Label(gpio_layout_frame, text="GPIO09 ________________ 21")
+    gpio_22_label = Tkinter.Label(gpio_layout_frame, text="22 ________________ GPIO25")
+    gpio_23_label = Tkinter.Label(gpio_layout_frame, text="GPIO11 ________________ 23")
+    gpio_24_label = Tkinter.Label(gpio_layout_frame, text="24 ________________ GPIO08")
+    gpio_25_label = Tkinter.Label(gpio_layout_frame, text="GROUND ______________ 25")
+    gpio_26_label = Tkinter.Label(gpio_layout_frame, text="26 ________________ GPIO07")
+
+    gpio_1_label.place(x=20, y=20)
+    gpio_2_label.place(x=200, y=20)
+    gpio_3_label.place(x=20, y=50)
+    gpio_4_label.place(x=200, y=50)
+    gpio_5_label.place(x=20, y=80)
+    gpio_6_label.place(x=200, y=80)
+    gpio_7_label.place(x=20, y=110)
+    gpio_8_label.place(x=200, y=110)
+    gpio_9_label.place(x=20, y=140)
+    gpio_10_label.place(x=200, y=140)
+    gpio_11_label.place(x=20, y=170)
+    gpio_12_label.place(x=200, y=170)
+    gpio_13_label.place(x=20, y=200)
+    gpio_14_label.place(x=200, y=200)
+    gpio_15_label.place(x=20, y=230)
+    gpio_16_label.place(x=200, y=230)
+    gpio_17_label.place(x=20, y=260)
+    gpio_18_label.place(x=200, y=260)
+    gpio_19_label.place(x=20, y=290)
+    gpio_20_label.place(x=200, y=290)
+    gpio_21_label.place(x=20, y=320)
+    gpio_22_label.place(x=200, y=320)
+    gpio_23_label.place(x=20, y=350)
+    gpio_24_label.place(x=200, y=350)
+    gpio_25_label.place(x=20, y=380)
+    gpio_26_label.place(x=200, y=380)
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+from Tkinter import *
+from tkFileDialog   import askopenfilename      
+
+def callback():
+    name= askopenfilename() 
+    print name
+    
+errmsg = 'Error!'
+Button(text='File Open', command=callback).pack(fill=X)
+mainloop()
